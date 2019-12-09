@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="/static/js/getrequest.js"></script>
+        <script src="/static/js/postrequest.js"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <title>NoteExpress - Seu gerenciador de notas!</title>
+  </head>
+  <body>
+      <script type="text/javascript">
+        function add() {
+          location.href="/form"
+        }
+        function list(){
+            location.href="/listar" 
+          }
+      </script>
+      <div class="jumbotron text-center button-center" style="background-color: antiquewhite;">
+        <h1>NotesExpress!</h1>
+        <button onclick="add()"  class="btn btn-outline-secondary btn-lg">Adicionar notas</button>
+        <button onclick="list()" type="button" class="btn btn-lg btn-outline-secondary">Listar Notas</button>
+      </div>
+  </body>
+</html>

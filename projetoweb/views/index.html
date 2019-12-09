@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>NoteExpress - Seu gerenciador de notas!</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> 
+  <script src="/static/js/getrequest.js"></script>
+  <script src="/static/js/postrequest.js"></script>
+</head>
+<script>
+	function alert(){
+		swal({
+			title: "NOTA ADICIONADA",
+			text: "Nota foi adicionada com sucesso!",
+			icon: "success",
+			button: false
+		});	
+	}
+	function back(){
+		location.href="/" 
+	}
+
+</script>
+<body> 
+	<div style="max-width: 100%; background-color: #FFFEA4;">		
+		<form id="userForm" style="max-width: 30%; margin-left:35%;">
+		  <div class="form-group">
+			<label for="id">ID DA NOTA:</label>
+			<input type="number" class="form-control" id="id" placeholder="Entre com o ID"/>
+		  </div>
+		  <div class="form-group">
+			<label for="content">CONTEUDO:</label>
+			<input type="text" class="form-control" id="content" placeholder="Enter content"/>
+		  </div>
+		  <button onclick="alert()" type="submit" class="btn btn-outline-dark">Adicionar nota</button>
+		</form>
+		<button onclick="back()" type="submit" class="btn  btn-sm btn-outline-dark">Voltar </button>
+	</div>
+</body>
+</html>
